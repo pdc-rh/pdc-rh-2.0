@@ -1,8 +1,15 @@
-class conexao{
+<?php
+class Conexao{
     private $dbname;
     private $dbpassword;
     private $dbservice;
-
+    
+    public function __construct() {
+        $this->dbname = "";
+        $this->dbpassword = "";
+        $this->dbservice = "";
+    }
+    
     public function getDbnome(){
         return $this->dbname;
     }
@@ -20,19 +27,20 @@ class conexao{
         $this->dbname=$dbname;
     }
     
-    public function getDbpassword($dbpassword){
+    public function setDbpassword($dbpassword){
         $this->dbpassword=$dbpassword;
     }
     
-    public function getDbservice($dbservice){
+    public function setDbservice($dbservice){
         $this->dbservice=$dbservice;
     }
 
     public function connect(){
-        $con=oci_connect(getDbnome(), getDbpassword(),getDbservice());
+        $con=oci_connect($this->dbname, $this->dbpassword, $this->dbservice);
         if($con){
-            return true;
+            return $con;
         }
-        return false;
+        return NULL;
     }
 }
+?>
