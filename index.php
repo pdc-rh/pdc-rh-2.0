@@ -28,7 +28,7 @@
     <section class="descricao">
         <div class="titulo">
             <h1 class="titulo-1">PDC-RH</h1>
-            <span class="slogan">O seu pesadelo.</span>
+            <span class="slogan">Encontre o seu espaço.</span>
         </div>
     </section>
 </header>

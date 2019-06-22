@@ -131,6 +131,9 @@ menu .outro-menu li a{
     transform: translate(-50%,-50%);
     font-size: 14pt;
     text-align: center;
+    padding: 50px;
+    background-color: rgba(0,0,0,0.48);
+    width: 600px;
 }
 
 .titulo{
