@@ -9,12 +9,12 @@
             <a href="#">Registar Funcionario</a>
             <a href="#">Registar Gestor</a>
             <a href="#">Listar</a>
-            <a href="#">Activar/Desactivar</a>
+            <a href="#">Activar/Desactivar Funcionario</a>
         </div>
     </li>
 
-    <li class="item" id="gestor">
-        <a href="#gestor" class="lista">Candidato</a>
+    <li class="item" id="candidato">
+        <a href="#candidato" class="lista">Candidato</a>
         <div class="submenu">
             <a href="#">Registar Candidato</a>
             <a href="#">Listar</a>
@@ -24,17 +24,34 @@
         </div>
     </li>
 
-    <li class="item" id="area">
-        <a class="lista" href="#area">Perfil de Oferta</a>
+    <li class="item" id="perfil">
+        <a class="lista" href="#perfil">Perfil de Oferta</a>
         <div class="submenu">
-            <a href="#">Criar Perfil de oferta</a>
-            <a href="#">Desactivar/Activar</a>
+            <a href="#">Criar Perfil de Oferta</a>
+            <a href="#">Activar/Desactivar Perfil</a>
             <a href="#">Listar</a>
             <a href="#">Marcar Prova</a>
         </div>
     </li>
 
-    <li class="item" id="estatisticas">
+    <li class="item" id="escala">
+        <a href="#escala" class="lista">Categoria e Escalão</a>
+        <div class="submenu">
+            <a href="#">Registar Categoria</a>
+            <a href="#">Registar Escalão</a>
+            <a href="#">Listar Escalão</a>
+        </div>
+    </li>
+
+    <li class="item" id="filiais">
+        <a class="lista" href="#filiais">Filiais</a>
+        <div class="submenu">
+            <a href="#">Registar Empresas Filiais</a>
+            <a href="#">Listar Empresas Filiais</a>
+        </div>
+    </li>
+
+    <li class="item" id="estatistica">
         <a class="lista" href="#estatistica">Estatisticas</a>
         <div class="submenu">
             <a href="#">Lista dos Perfis da oferta por Local</a>
@@ -49,5 +66,6 @@
             <a href="#">Quem é o funcionário que obteve o maior prémio entre as afiliares e qual foi o seu escalão</a>
             <a href="#">Qual é a afiliar com maior numero de Funcionários</a>
         </div>
+
     </li>
 </ul>
