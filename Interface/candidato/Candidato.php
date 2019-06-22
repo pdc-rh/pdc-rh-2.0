@@ -2,9 +2,11 @@
 
 <html>
 <head>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../personalizacao/img/logotipo.png" />
     <link rel="stylesheet" href="../../personalizacao/css/estilo_candidato.css">
-    
+    <title>PDC-RH</title>
 </head>
 <body>
 <form id="formulario" action="ok.php" method="post">
