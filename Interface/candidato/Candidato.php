@@ -70,7 +70,7 @@
             <button type="button" id="btnContinuar" onclick="continuarVoltar(1)">Continuar</button>
         </div>
         <div style="float:left" class="bCancelar" >
-           <a class="vermelho" href="index.php" ><button type="button" class="btnCancelar">Cancelar</button> </a>
+           <a class="vermelho" href="../../index.php" ><button type="button" class="btnCancelar">Cancelar</button> </a>
      </div>
         
     </div>
