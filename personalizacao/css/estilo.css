@@ -1,8 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Dialog";
-    font-style: normal;
+    font-family: Arial Narrow, sans-serif;
 }
 
 #inicio{
@@ -143,6 +142,7 @@ menu .outro-menu li a{
 }
 
 .titulo-1{
+    font-family: Arial Narrow "Yu Gothic UI Light";
     display: block;
     font-size: 30pt;
     font-weight: 400;
@@ -150,6 +150,7 @@ menu .outro-menu li a{
 }
 
 .slogan{
+    margin-top: 10px;
     display: block;
     font-size: 15pt;
     letter-spacing: 10px;
