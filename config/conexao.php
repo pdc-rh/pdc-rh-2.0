@@ -5,9 +5,9 @@ class Conexao{
     private $dbservice;
     
     public function __construct() {
-        $this->dbname = "";
-        $this->dbpassword = "";
-        $this->dbservice = "";
+        $this->dbname = "pdc-rh-v2";
+        $this->dbpassword = "123";
+        $this->dbservice = "localhost/XE";
     }
     
     public function getDbnome(){
@@ -39,8 +39,13 @@ class Conexao{
         $con=oci_connect($this->dbname, $this->dbpassword, $this->dbservice);
         if($con){
             return $con;
+        }else{
+            echo "Conexão não feita";
+            exit();
         }
-        return NULL;
+        return;
     }
 }
 ?>
+
+ 
