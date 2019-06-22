@@ -1,66 +1,91 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/estilo.css">
+    <link rel="stylesheet" href="../../personalizacao/css/estilo_candidato.css">
+    
 </head>
 <body>
 <form id="formulario" action="ok.php" method="post">
     <div class="tab">
         <label for="nome">Nome Completo</label>
         <input type="text" name="nome" id="nome" ><br>
-
+       <label for="nome">Genero</label>
+        <select name=genero>
+            <option></option>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+        </select>
         <label for="data">Data de Nascimento</label>
         <input type="date" name="data" id="data" ><br>
-        <label for="data">Data de Nascimento</label>
-        <select style="width: 50px">
-            <option>1</option>
-            <option>2</option>
-        </select>
-        <label for="data">Data de Nascimento</label>
-        <select style="width: 50px">
-            <option>1</option>
-            <option>2</option>
-        </select>
-
+        <label for="bi">BI número</label>
+        <input type="text" name="bi" id="bi"/><br>
+            
     </div>
 
     <div class="tab">
-        <label for="pai">Nome do Pai</label>
-        <input type="text" name="pai" id="pai">
+    
+        <label for="local">Local de Nascimento</label>
+        <input type="text" name="text" id="local" /><br>
+        <label for="nome">Estado civil</label>
+        <select name="estado_civil">
+            <option></option>
+            <option>Solteiro/a</option>
+            <option>Casado/a</option>
+            <option>Divorciado/a</option>
+            <option>Viuvo/a</option>
+        </select>
+        <label for="pai">Morada actual</label>
+        <input type="text" name="morada" id="morada"/>
 
-        <label for="mae">Nome da Mãe</label>
-        <input type="text" name="mae" id="mae"><br>
+        <label for="email">NIF</label>
+        <input type="email" name="nif" id="nif"/>
 
-        <label for="email">E-mail</label>
-        <input type="email" name="email" id="email">
+        <label for="tipo">Tipo de funcionario</label>
+        <input type="text" name="tipo" id="tipo"/>
+
     </div>
     
     <div class="tab">
-        <label for="pai">Nome do Pai</label>
-        <input type="text" name="pai" id="pai">
+            <label for="carta">Número da carta de condução</label>
+            <input type="text" name="carta" id="carta"/>
+    
+            <label for="telefone">Número do telefone</label>
+            <input type="tel" name="telefone" id="telefone"/>
+        <label for="nacionalidade">Nacionalidade</label>
+        <select name="nacionalidade">
+            <option value="1">Angolana</option>
+        </select><br><br>
 
-        <label for="mae">Nome da Mãe</label>
-        <input type="text" name="mae" id="mae"><br>
-
-        <label for="email">E-mail</label>
-        <input type="email" name="email" id="email">
+        <label for="senha">Palavra passe</label>
+        <input type="password" placeholder="palavrapasse" name="senha" /><br><br>
+        
+       
     </div>
 
     <div style="overflow:auto;">
         <div style="float:right;">
-            <button type="button" id="btnVoltar" onclick="continuarVoltar(-1)">Voltar</button>
+            <button type="button" id="btnVoltar" >Voltar</button>
             <button type="button" id="btnContinuar" onclick="continuarVoltar(1)">Continuar</button>
         </div>
+        <div style="float:left" class="bCancelar" >
+           <a class="vermelho" href="../../index.php" ><button type="button" class="btnCancelar">Cancelar</button> </a>
+     </div>
+        
     </div>
+    
+    
+    
+    
     <div style="text-align:center;margin-top:40px;">
         <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
     </div>
+        
 </form>
-    <script type="text/javascript" src="JavaScript/step.js"></script>
+        
+<script type="text/javascript" src="../../personalizacao/javascript/step_candidato.js"></script>
 </body>
 </html>
-
-

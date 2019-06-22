@@ -22,7 +22,7 @@
         </ul>
         <div class="outro-menu">
             <li class="verde"><a id="entrar" >Entrar</a></li>
-            <li class="azul"><a id="entrar" >Criar Conta</a></li>
+            <li class="azul"><a id="entrar"  href="Interface/candidato/candidato.php">Criar Conta</a></li>
         </div>
     </menu>
     <section class="descricao">
