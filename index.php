@@ -51,17 +51,18 @@
     </div>
 </footer>
 
-<div id="Modal" class="modal">
+<form id="Modal" class="modal" method="post" action="controlador/loginControlador.php">
     <div class="modal-conteudo">
         <span class="fechar">&times;</span>
         <h3>Login</h3>
         <input type="text" name="telefone" placeholder="numero de telefone">
         <input type="password" name="senha" placeholder="Senha">
-        <a href="#" class="botao">Entrar</a>
+        <a href="#" class="botao" onclick="validarModal()">Entrar</a>
     </div>
-</div>
+</form>
 
-
+<script src="personalizacao/javascript/validacoes.js">
+</script>
 <script >
     //mudar estilo do menu quando o eixo Y for maios ou igual a 200
     window.onscroll = function(event){
