@@ -1,76 +1,254 @@
-body{
-    background-color: #fff;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-#formulario{
-    width: 500px;
-    height: auto;
+#inicio{
+    width: 100%;
+    height: 100vh;
+    background: url("../img/bg.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#oferta{
+    width: 100%;
+    height: 100vh;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+#sobre{
+    width: 100%;
+    height: 300px;
+    background-color: #000000;
+    position: relative;
+}
+
+/*----- Cabeçalho ------------*/
+.corMenu{
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 5px 0px;
+}
+
+.corMenu ul li a{
+    color: #5d7790;
+}
+
+.corMenu ul li a:hover{
+    margin-top: 5px;
+    border-bottom: 4px solid #ff9500;
+}
+
+menu{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    text-transform: uppercase;
+    z-index: 1;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.logotipo{
+    float: left;
+    margin-top: 15px;
+}
+
+.logo{
+    width: 45px;
+    height: 45px;
+    margin-left: 45px;
+}
+
+menu ul{
+    margin-top: 20px;
+    list-style: none;
+    float: left;
+    margin-left: 40px;
+}
+
+menu ul li{
+    display: inline-block;
+    padding: 15px;
+}
+
+menu ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+menu ul li a:hover{
+    margin-top: 5px;
+    border-bottom: 4px solid #ff9500;
+}
+
+.descricao{
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 14pt;
+    text-align: center;
+}
+
+.titulo{
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.titulo-1{
+    display: block;
+    font-size: 30pt;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+.slogan{
+    display: block;
+    font-size: 15pt;
+    letter-spacing: 10px;
+}
+
+.btn-entrar{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #000;
+    transition: all .5s;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.btn-entrar:hover{
+    background-color: #4a84ff;
+    color: #fff;
+}
+/*----- Cabeçalho ------------*/
+
+/*----- Oferta de trabalho ------------*/
+#oferta .conteudo-oferta {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+}
+
+#oferta .conteudo-oferta .titulo h4{
+    padding-top: 80px;
+    text-align: center;
+    color: #5d7790;
+}
+
+#oferta .conteudo-oferta .titulo hr{
+    border: 0;
+    margin-top: 10px;
+    width: 150px;
+    border-bottom: 4px solid #ff9500;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#oferta .conteudo-oferta .titulo hr::after{
+    content: '';
+    top: 10px;
+    width: 100px;
+    border-bottom: 4px solid #ff9500;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+/*----- Oferta de trabalho ------------*/
+
+/*----- Modal ------------*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-conteudo{
+    width: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
+    background-color: #fff;
+    text-align: center;
+    padding: 25px;
 }
 
-
-input,select{
-    padding: 5px;
+.modal-conteudo input[type=text], .modal-conteudo input[type=password]{
     border: 0;
-    outline:none;
-    border-bottom: 2px solid #555;
-    font-size: 20px;
-    width: 500px;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    -moz-transition: .5s ease-in-out;
-    -webkit-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    -ms-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    margin: 5px 0 10px 0;
     background-color: transparent;
+    -webkit-background-color: transparent;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border-bottom: 4px solid #333333;
+    padding: 14px 10px;
+    width: 300px;
+    outline: none;
+    color: #333333;
+    transition: 0.25s;
+    font-size: 14pt;
 }
 
-input.invalido {
-    background-color: #ffdddd;
+.modal-conteudo .botao{
+    border: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    width: 350px;
+    color: #fff;
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: 15pt;
+    text-decoration: none;
+    background-color: #35AA41;
 }
 
-input:focus{
-    border-bottom: 3px solid #222;
+.modal-conteudo input[type=text]:focus, .modal-conteudo input[type=password]:focus{
+    width: 380px;
 }
 
-
-.tab {
-    display: none;
+.fechar{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
-button {
-    background-color: #4CAF50;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 17px;
-    font-family: Raleway;
+
+.fechar:hover,
+.fechar:focus{
+    color: black;
+    text-decoration: none;
     cursor: pointer;
 }
-button:hover {
-    opacity: 0.8;
-}
-#btnVoltar {
-    background-color: #bbbbbb;
-}
-.step {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbbbbb;
-    border: none;
-    border-radius: 50%;
-    display: inline-block;
-    opacity: 0.5;
-}
-.step.actual {
-    opacity: 1;
-}
-.step.fim {
-    background-color: #4CAF50;
-}
+/*----- Modal ------------*/
