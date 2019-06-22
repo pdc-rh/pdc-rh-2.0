@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PDC-RH</title>
+    <link rel="stylesheet" href="personalizacao/css/estilo.css">
 </head>
 <body>
 <!-- Inicio-->
@@ -19,14 +20,16 @@
             <li><a href="#oferta">Oferta de Trabalho</a></li>
             <li><a href="#sobre">Sobre</a></li>
         </ul>
+        <div class="outro-menu">
+            <li class="verde"><a id="entrar" >Entrar</a></li>
+            <li class="azul"><a id="entrar" >Criar Conta</a></li>
+        </div>
     </menu>
     <section class="descricao">
         <div class="titulo">
             <h1 class="titulo-1">PDC-RH</h1>
             <span class="slogan">O seu pesadelo.</span>
         </div>
-        <a class="btn-entrar" id="entrar">Entrar</a><br>
-        <a class="btn-entrar" href="#oferta">Candidata-se</a>
     </section>
 </header>
 
