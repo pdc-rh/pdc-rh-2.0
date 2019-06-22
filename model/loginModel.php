@@ -25,13 +25,13 @@ class loginModel {
         oci_execute($consulta);
         $row = oci_fetch_array($consulta, OCI_ASSOC);
         if($row){
-            header("location:../Interface/candidato/home.php");
+            header("location:../Interface/candidato/");
         }else{
             $consulta1 = oci_parse($conexao->connect(), $aux->stringConsultaGestor());
             oci_execute($consulta1);
             $row1 = oci_fetch_array($consulta1, OCI_ASSOC);            
             if($row1){
-                header("location:../Interface/admin/home.php");
+                header("location:../Interface/admin/");
             }
         }
     }
