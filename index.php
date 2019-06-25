@@ -134,14 +134,7 @@
         <h3>Login</h3>
         <input type="text" name="telefone" placeholder="numero de telefone">
         <input type="password" name="senha" placeholder="Senha">
-        <a href="#" class="botao" onclick="validarModalLogin">Entrar</a>
-
-        <?php
-            echo "<div class=\"erro-secssao\">
-            Número de Telefone ou Senha errada!
-        </div>";
-        ?>
-
+        <a href="#" class="botao" onclick="validarModalLogin()">Entrar</a>
     </div>
 </form>
 
