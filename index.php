@@ -134,16 +134,7 @@
         <h3>Login</h3>
         <input type="text" name="telefone" placeholder="numero de telefone">
         <input type="password" name="senha" placeholder="Senha">
-<<<<<<< HEAD
         <button  class="botao" onclick="validarModalLogin()">Entrar</button>
-=======
-<<<<<<< Updated upstream
-        <button class="botao" onclick="validarModalLogin()">Entrar</button>
-=======
-        <a href="#" class="botao" onclick="validarModalLogin()">Entrar</a>
-
->>>>>>> Stashed changes
->>>>>>> master
     </div>
 </form>
 
