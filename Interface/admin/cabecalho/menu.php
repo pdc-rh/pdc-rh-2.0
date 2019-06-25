@@ -1,12 +1,12 @@
 <ul class="menu">
     <li class="item" >
-        <a href="#" class="lista">Incio</a>
+        <a href="index.php" class="lista">Incio</a>
     </li>
 
     <li class="item" id="funcionario">
         <a href="#funcionario" class="lista">Funcionarios</a>
         <div class="submenu">
-            <a href="#">Registar Funcionario</a>
+            <a href="registar_funcionario.php">Registar Funcionario</a>
             <a href="#">Registar Gestor</a>
             <a href="#">Listar</a>
             <a href="#">Activar/Desactivar Funcionario</a>
@@ -16,7 +16,7 @@
     <li class="item" id="candidato">
         <a href="#candidato" class="lista">Candidato</a>
         <div class="submenu">
-            <a href="#">Registar Candidato</a>
+            <a href="registar_candidato.php">Registar Candidato</a>
             <a href="#">Listar</a>
             <a href="#">Marcar Entrevista</a>
             <a href="#">Aprovar Candidato</a>
