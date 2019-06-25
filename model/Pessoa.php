@@ -113,7 +113,11 @@ class Pessoa implements Crud{
     }
 
     public function insert() {
-        
+        $conexao=new Conexao();
+        $str=" insert into pessoa values('$this->bi','$this->nome','$this->genero','$this->nif','','$this->numCartaCon',$this->telefone,'$this->dtaNasc,$this->idLocalMorada,'$this->idLocalMorada')";
+        $inserirPessoa=oci_parse($conexao->connect(),$str);
+        oci_execute($inserirPessoa);
+      
     }
 
     public function select() {
