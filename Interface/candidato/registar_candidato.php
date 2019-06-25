@@ -68,7 +68,7 @@
 
     <div style="overflow:auto;">
         <div style="float:right;">
-            <button type="button" id="btnVoltar" >Voltar</button>
+            <button type="button" id="btnVoltar" onclick="continuarVoltar(-1)">Voltar</button>
             <button type="button" id="btnContinuar" onclick="continuarVoltar(1)">Continuar</button>
         </div>
         <div style="float:left" class="bCancelar" >
@@ -88,6 +88,34 @@
         
 </form>
         
-<script type="text/javascript" src="../../personalizacao/javascript/step_candidato.js"></script>
+<script type="text/javascript" src="../../personalizacao/javascript/step.js"></script>
+<script>
+
+    function continuarVoltar(n) {
+        var x = document.getElementsByClassName("tab");
+        if (n == 1 && !validarFormulario()) return false;
+        x[contador].style.display = "none";
+        contador = contador + n;
+        if (contador >= x.length) {
+            document.getElementById("formulario").submit();
+            return false;
+        }
+        mostarFomulario(contador);
+    }
+
+    function validarFormulario() {
+        var x, y, i, valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[contador].getElementsByTagName("input");
+        if(!(/^[A-Z]\[a-z]*/).test(y[0].value)){
+            y[0].className += " invalido";
+            valid = false;
+        }
+        if (valid) {
+            document.getElementsByClassName("step")[contador].className += " fim";
+        }
+        return valid;
+    }
+</script>
 </body>
 </html>

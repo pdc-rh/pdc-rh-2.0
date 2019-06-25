@@ -23,7 +23,7 @@
         </ul>
         <div class="outro-menu">
             <li class="verde"><a id="entrar" >Entrar</a></li>
-            <li class="azul"><a id="entrar"  href="Interface/candidato/candidato.php">Criar Conta</a></li>
+            <li class="azul"><a id="entrar"  href="Interface/candidato/registar_candidato.php">Criar Conta</a></li>
         </div>
     </menu>
     <section class="descricao">
@@ -36,10 +36,86 @@
 
 <!-- Oferta de Trabalho-->
 <div id="oferta">
+    <h4 class="titulo">Oferta de Trabalho</h4>
+
     <div class="conteudo-oferta">
-        <div class="titulo">
-            <h4>Oferta de Trabalho</h4>
-            <hr>
+
+        <div class="perfil">
+            <div class="linha azul"></div>
+            <h1 class="vaga">Tecnico de Hardware</h1>
+            <h4>Condições e Regalias</h4>
+            <p>Bla Bla Bla</p>
+            <h4>Preferencias</h4>
+            <p>Bla Bla Bla</p>
+            <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
+            <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
+            <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
+            <button href="#">Candidatar</button><br><br>
+        </div>
+
+        <div class="perfil">
+            <div class="linha verde"></div>
+            <h1 class="vaga">Tecnico de Hardware</h1>
+            <h4>Condições e Regalias</h4>
+            <p>Bla Bla Bla</p>
+            <h4>Preferencias</h4>
+            <p>Bla Bla Bla</p>
+            <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
+            <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
+            <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
+            <button href="#">Candidatar</button><br><br>
+        </div>
+
+        <div class="perfil">
+            <div class="linha laranja"></div>
+            <h1 class="vaga">Tecnico de Hardware</h1>
+            <h4>Condições e Regalias</h4>
+            <p>Bla Bla Bla</p>
+            <h4>Preferencias</h4>
+            <p>Bla Bla Bla</p>
+            <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
+            <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
+            <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
+            <button href="#">Candidatar</button><br><br>
+        </div>
+
+        <div class="perfil">
+            <div class="linha azul"></div>
+            <h1 class="vaga">Tecnico de Hardware</h1>
+            <h4>Condições e Regalias</h4>
+            <p>Bla Bla Bla</p>
+            <h4>Preferencias</h4>
+            <p>Bla Bla Bla</p>
+            <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
+            <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
+            <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
+            <button href="#">Candidatar</button><br><br>
+        </div>
+
+        <div class="perfil">
+            <div class="linha verde"></div>
+            <h1 class="vaga">Tecnico de Hardware</h1>
+            <h4>Condições e Regalias</h4>
+            <p>Bla Bla Bla</p>
+            <h4>Preferencias</h4>
+            <p>Bla Bla Bla</p>
+            <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
+            <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
+            <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
+            <button href="#">Candidatar</button><br><br>
+        </div>
+
+        <div class="perfil">
+            <div class="linha laranja"></div>
+            <h1 class="vaga">Tecnico de Hardware</h1>
+            <h4>Condições e Regalias</h4>
+            <p>Bla Bla Bla</p>
+            <h4>Preferencias</h4>
+            <p>Bla Bla Bla</p>
+            <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
+            <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
+            <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
+            <button href="#">Candidatar</button><br><br>
         </div>
 
     </div>
@@ -47,7 +123,7 @@
 
 <footer>
     <!-- Contacto -->
-    <div id="sobre">
+    <div id="sobre" style="margin-top: 60px">
 
     </div>
 </footer>
@@ -69,7 +145,6 @@
     window.onscroll = function(event){
         var menu = document.getElementById("menu");
         if (window.scrollY >= 200){
-            //menu.style.backgroundColor = "#fff";
             menu.classList = "corMenu";
         }else {
             menu.classList = "";
