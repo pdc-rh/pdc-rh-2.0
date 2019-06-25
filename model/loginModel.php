@@ -32,6 +32,8 @@ class loginModel {
             $row1 = oci_fetch_array($consulta1, OCI_ASSOC);            
             if($row1){
                 header("location:../Interface/admin/");
+            }else{
+                header("location:pdc-rh-2.0/index.php?estado=1");
             }
         }
     }
