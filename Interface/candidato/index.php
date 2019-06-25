@@ -137,6 +137,10 @@
     <div class="modal-conteudo">
         <h3>Preencha o seu Curriculum Vitae</h3>
         <a href="#" class="botao" id="preencher">Preencher</a>
+
+        <div class="erro-secssao">
+            Número de Telefone ou Senha inválida!
+        </div>
     </div>
 </form>
 
