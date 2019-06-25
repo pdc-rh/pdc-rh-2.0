@@ -134,7 +134,7 @@
         <h3>Login</h3>
         <input type="text" name="telefone" placeholder="numero de telefone">
         <input type="password" name="senha" placeholder="Senha">
-        <button class="botao" onclick="validarModalLogin()">Entrar</button>
+        <button  class="botao" onclick="validarModalLogin()">Entrar</button>
     </div>
 </form>
 
