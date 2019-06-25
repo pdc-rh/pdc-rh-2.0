@@ -9,7 +9,7 @@
     <title>PDC-RH</title>
 </head>
 <body>
-<form id="formulario" action="ok.php" method="post">
+    <form id="formulario" action="../../controlador/candidatoControlador.php" method="post">
     <div class="tab">
         <label for="nome">Nome Completo</label>
         <input type="text" name="nome" id="nome" ><br>
@@ -29,9 +29,9 @@
     <div class="tab">
     
         <label for="local">Local de Nascimento</label>
-        <input type="text" name="text" id="local" /><br>
+        <input type="text" name="local" id="local" /><br>
         <label for="nome">Estado civil</label>
-        <select name="estado_civil">
+        <select name="estadoCivil">
             <option></option>
             <option>Solteiro/a</option>
             <option>Casado/a</option>
@@ -42,10 +42,9 @@
         <input type="text" name="morada" id="morada"/>
 
         <label for="email">NIF</label>
-        <input type="email" name="nif" id="nif"/>
+        <input type="text" name="nif" id="nif"/>
 
-        <label for="tipo">Tipo de funcionario</label>
-        <input type="text" name="tipo" id="tipo"/>
+
 
     </div>
     
@@ -107,7 +106,7 @@
         var x, y, i, valid = true;
         x = document.getElementsByClassName("tab");
         y = x[contador].getElementsByTagName("input");
-        if(!(/^[A-Z]\[a-z]*/).test(y[0].value)){
+        if(!(/^[A-Z]/).test(y[0].value)){
             y[0].className += " invalido";
             valid = false;
         }

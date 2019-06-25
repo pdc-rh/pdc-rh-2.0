@@ -1,4 +1,5 @@
 <?php
+require_once '../model/Pessoa.php';
 require_once '../config/CRUD.php';
 class Candidato extends Pessoa implements Crud{
     private $bi;
@@ -13,7 +14,7 @@ class Candidato extends Pessoa implements Crud{
         $this->id = $id;
         $this->palavraPasse = $palavraPasse;
         $this->nacionalidade = $nacionalidade;
-        $this->estado = $estado;
+        $this->estado = 1;
         $this->idLocal = $idLocal;
     }
 
@@ -71,7 +72,7 @@ class Candidato extends Pessoa implements Crud{
     }
 
     public function insert() {
-        
+        $str="insert into candidato values('$this->bi',1,'$this->palavraPasse','$this->nacionalidade','1',$this->idLocal)";
     }
 
     public function select() {

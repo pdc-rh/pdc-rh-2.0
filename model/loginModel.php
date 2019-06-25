@@ -16,7 +16,14 @@ class loginModel {
     public function stringConsultaGestor(){
         return "select * from gestor_recrutamento_selecao where id_gestor_area in (select id from gestor_area where bi_funcionario in (select bi_pessoa from funcionario where bi_pessoa in (select bi from pessoa where telefone=$this->telefone))) and senha='$this->senha'";
     }    
-
+    private function CriarSecaoCand($num){
+        $conexao= new conexao();
+        session_start();
+        $secao = oci_parse($conexao->conecaoOci(),"select bi nome from pessoa where telefone=$num");
+        oci_execute($secao);
+        $l=oci_fetch_array($secao, OCI_ASSOC);
+        $_SESSION['login']=$l;
+    }
 
     public function efectuarLogin($telefone, $senha){
         $aux = new loginModel($telefone, $senha);
@@ -25,15 +32,17 @@ class loginModel {
         oci_execute($consulta);
         $row = oci_fetch_array($consulta, OCI_ASSOC);
         if($row){
+            $aux->CriarSecaoCand($telefone);
             header("location:../Interface/candidato/");
         }else{
             $consulta1 = oci_parse($conexao->connect(), $aux->stringConsultaGestor());
             oci_execute($consulta1);
             $row1 = oci_fetch_array($consulta1, OCI_ASSOC);            
             if($row1){
+                
                 header("location:../Interface/admin/");
             }else{
-                header("location:pdc-rh-2.0/index.php?estado=1");
+                header("location:../index.php?estado=1");
             }
         }
     }
