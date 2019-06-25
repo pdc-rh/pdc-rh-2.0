@@ -6,9 +6,9 @@ body{
     width: 500px;
     height: auto;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-60%);
+    transform: translate(-50%,-50%);
 }
 
 
@@ -43,8 +43,7 @@ input:focus{
 .tab {
     display: none;
 }
-
-button{
+button {
     background-color: #4CAF50;
     color: #ffffff;
     border: none;
@@ -52,18 +51,13 @@ button{
     font-size: 17px;
     font-family: Raleway;
     cursor: pointer;
-    
 }
-
-
-
 button:hover {
     opacity: 0.8;
 }
 #btnVoltar {
     background-color: #bbbbbb;
 }
-
 .step {
     height: 15px;
     width: 15px;
@@ -80,7 +74,3 @@ button:hover {
 .step.fim {
     background-color: #4CAF50;
 }
-a{
-    text-decoration-line: none;
-}
-
