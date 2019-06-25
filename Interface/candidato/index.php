@@ -25,7 +25,7 @@
             <ul class="menu-user">
                 <li>Utilizador
                     <ul>
-                        <li>Sair</li>
+                        <li><a href="#">Sair</a></li>
                     </ul>
                 </li>
             </ul>
