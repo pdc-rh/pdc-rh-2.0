@@ -21,6 +21,15 @@
             <li><a href="#oferta">Oferta de Trabalho</a></li>
             <li><a href="#sobre">Sobre</a></li>
         </ul>
+        <div class="outro-menu">
+            <ul class="menu-user">
+                <li>Utilizador
+                    <ul>
+                        <li>Sair</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </menu>
     <section class="descricao">
         <div class="titulo">
@@ -142,9 +151,6 @@
             menu.classList = "";
         }
     }
-
-
-
 
     //modal da mensagem
     var modal = document.getElementById("Modal");

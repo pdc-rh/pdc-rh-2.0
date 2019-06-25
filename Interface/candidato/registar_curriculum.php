@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDC-RH</title>
     <link rel="stylesheet" type="text/css" href="../../personalizacao/css/estilo_candidato.css">
-</head> 
+</head>
 <body>
 <form id="formulario" action="ok.php" method="post">
     <div class="tab">
@@ -103,6 +103,9 @@
     </div>
 
     <div style="overflow:auto;">
+        <div style="float:left">
+            <button type="button" onclick="cancelar()" style="background-color: red">Cancelar</button>
+        </div>
         <div style="float:right;">
             <button type="button" id="btnVoltar" onclick="continuarVoltar(-1)">Voltar</button>
             <button type="button" id="btnContinuar" onclick="continuarVoltar(1)">Continuar</button>
@@ -117,5 +120,36 @@
     </div>
 </form>
 <script type="text/javascript" src="../../personalizacao/javascript/step.js"></script>
+<script>
+    function cancelar() {
+        location.href = "http://localhost/pdc-rh-2.0/interface/candidato/";
+    }
+
+    function continuarVoltar(n) {
+        var x = document.getElementsByClassName("tab");
+        if (n == 1 && !validarFormulario()) return false;
+        x[contador].style.display = "none";
+        contador = contador + n;
+        if (contador >= x.length) {
+            document.getElementById("formulario").submit();
+            return false;
+        }
+        mostarFomulario(contador);
+    }
+
+    function validarFormulario() {
+        var x, y, i, valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[contador].getElementsByTagName("input");
+        if(!(/^[A-Z]\[a-z]*/).test(y[0].value)){
+            y[0].className += " invalido";
+            valid = false;
+        }
+        if (valid) {
+            document.getElementsByClassName("step")[contador].className += " fim";
+        }
+        return valid;
+    }
+</script>
 </body>
 </html>
