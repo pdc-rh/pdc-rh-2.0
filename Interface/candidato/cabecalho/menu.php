@@ -1,14 +1,9 @@
-<ul class="menu">
-    <li class="item" >
-        <a href="#" class="lista">Incio</a>
-    </li>
-
+<ul class="menu-lateral">
     <li class="item" id="funcionario">
-        <a href="#funcionario" class="lista">CV</a>
+        <a href="#funcionario" class="lista">Curriculum</a>
         <div class="submenu">
-            <a href="#">Construir CV</a>
-            <a href="#">Ver</a>
-            <a href="#">Alterar</a>
+            <a href="#">Ver Curriculum</a>
+            <a href="#">Editar Curriculum</a>
         </div>
     </li>
 </ul>
