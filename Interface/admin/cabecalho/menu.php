@@ -54,7 +54,7 @@
     <li class="item" id="area">
         <a href="#area" class="lista">Area</a>
         <div class="submenu">
-            <a href="#">Criar Categoria</a>
+            <a href="registar_area.php">Criar Area</a>
             <a href="#">Listar</a>
         </div>
     </li>
