@@ -37,9 +37,9 @@
     <li class="item" id="escala">
         <a href="#escala" class="lista">Categoria e Escalão</a>
         <div class="submenu">
-            <a href="#">Registar Categoria</a>
-            <a href="#">Registar Escalão</a>
-            <a href="#">Listar Escalão</a>
+            <a href="registar_categoria.php">Registar Categoria</a>
+            <a href="registar_escalao.php">Registar Escalão</a>
+            <a href="#">Listar</a>
         </div>
     </li>
 
@@ -48,6 +48,14 @@
         <div class="submenu">
             <a href="registar_filial.php">Registar Empresas Filiais</a>
             <a href="#">Listar Empresas Filiais</a>
+        </div>
+    </li>
+
+    <li class="item" id="area">
+        <a href="#area" class="lista">Area</a>
+        <div class="submenu">
+            <a href="#">Criar Categoria</a>
+            <a href="#">Listar</a>
         </div>
     </li>
 
