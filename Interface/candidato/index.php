@@ -23,9 +23,9 @@
         </ul>
         <div class="outro-menu">
             <ul class="menu-user">
-                <li>Utilizador
+                <li><?php session_start(); echo $bi=$_SESSION['login']['NOME'];?>
                     <ul>
-                        <li><a href="#">Sair</a></li>
+                        <li><a href="../../index.php">Sair</a></li>
                     </ul>
                 </li>
             </ul>
