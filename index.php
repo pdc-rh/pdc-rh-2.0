@@ -122,9 +122,18 @@
 </div>
 
 <footer>
-    <!-- Contacto -->
     <div id="sobre" style="margin-top: 60px">
+        <div class="sobre_texto" style="float: left;">
+            <h2>Sobre PDC-RH</h2>
+            <p>Somos a PDC, uma empresa Vocacionada no desenvolvimento de aplicações web.<br>
+                existimos no mercado a Mais de 10 Anos e neste periodo sempre mantivemos<br>
+                o nosso compromisso de prestar um serviço de máxima qualidade.<br>
 
+        </div>
+
+        <div class="sobre_texto" style="float: right; margin-right: 20px">
+            <h2>Contactos</h2>
+        </div>
     </div>
 </footer>
 

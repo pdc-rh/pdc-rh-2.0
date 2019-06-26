@@ -57,28 +57,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Interface/candidato/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="161" column="62" selection-start-line="161" selection-start-column="62" selection-end-line="161" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="140" column="14" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="14" />
+            <state relative-caret-position="242">
+              <caret line="133" column="72" selection-start-line="133" selection-start-column="72" selection-end-line="133" selection-end-column="72" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Interface/Forms/Perfil de oferta/Activar_Desativar/Activar_Desativar.html">
+        <entry file="file://$PROJECT_DIR$/Interface/candidato/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="66" selection-end-column="7" />
+            <state relative-caret-position="218">
+              <caret line="141" column="4" selection-start-line="141" selection-start-column="4" selection-end-line="155" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/personalizacao/css/estilo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -131,7 +136,6 @@
         <option value="$PROJECT_DIR$/Interface/candidato/cabecalho/cabecalho.php" />
         <option value="$PROJECT_DIR$/Interface/candidato/cabecalho/menu.php" />
         <option value="$USER_HOME$/Downloads/mulit-step-form-with-progress-bar/mulit-step-form-with-progress-bar/index.html" />
-        <option value="$PROJECT_DIR$/personalizacao/css/estilo.css" />
         <option value="$PROJECT_DIR$/Interface/admin/Reg_Gestor.php" />
         <option value="$PROJECT_DIR$/Interface/admin/registar_categoria.php" />
         <option value="$PROJECT_DIR$/personalizacao/css/estilo_candidato.css" />
@@ -144,6 +148,7 @@
         <option value="$PROJECT_DIR$/Interface/admin/activar_desactivar_perfil_oferta.php" />
         <option value="$PROJECT_DIR$/Interface/candidato/index.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/personalizacao/css/estilo.css" />
       </list>
     </option>
   </component>
@@ -245,12 +250,12 @@
       <workItem from="1561437495314" duration="4508000" />
       <workItem from="1561453324496" duration="2779000" />
       <workItem from="1561463327283" duration="20330000" />
-      <workItem from="1561498638271" duration="8996000" />
+      <workItem from="1561498638271" duration="9811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61101000" />
+    <option name="totallyTimeSpent" value="61916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -480,13 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personalizacao/css/estilo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="268" selection-start-line="268" selection-end-line="268" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Interface/admin/registar_categoria.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -597,15 +595,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Interface/candidato/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="161" column="62" selection-start-line="161" selection-start-column="62" selection-end-line="161" selection-end-column="62" />
+        <state relative-caret-position="218">
+          <caret line="141" column="4" selection-start-line="141" selection-start-column="4" selection-end-line="155" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="140" column="14" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="14" />
+        <state relative-caret-position="242">
+          <caret line="133" column="72" selection-start-line="133" selection-start-column="72" selection-end-line="133" selection-end-column="72" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalizacao/css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
         </state>
       </provider>
     </entry>
