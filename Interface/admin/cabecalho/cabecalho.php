@@ -18,7 +18,7 @@
         <ul style="float: right">
             <li>
                 <img src="../../personalizacao/img/avatar.png">
-                <a href="#">user</a>
+                <a href="#"><?php session_start(); echo $bi=$_SESSION['login']['NOME'];?></a>
                 <ul class="corSubmenu">
                     <li><a href="index.php">sair</a></li>
                 </ul>

@@ -10,50 +10,32 @@ include_once ("cabecalho/menu.php");
 <div class="agrupar">
 
 
-    <input type="text" placeholder="Informe o Local " name="local">
-    <br><br>
-
     <table class="tabela">
         <thead>
         <tr>
-            <th>Id</th>
-            <th>Descrição</th>
-            <th>Condições e Regalias</th>
-            <th>Preferencias</th>
-            <th>Area</th>
-            <th>Local</th>
-            <th>Idade Minima</th>
-            <th>Idade Maxima</th>
-            <th>Data publicado</th>
-            <th>Data de Termino</th>
+            <th>BI</th>
+            <th>Nome do Candidato</th>
+            <th>Morada</th>
+      
         </tr>
         </thead>
 
         <tbody>
         <tr>
-            <td>1</td>
-            <td>Thiago</td>
-            <td>Masculino</td>
-            <td>20</td>
-            <td>webdesignemfoco@gmail.com</td>
-            <td>Luanda/Cazenga</td>
-            <td>17</td>
-            <td>39</td>
-            <td>02/06/2019</td>
-            <td>02/06/2019</td>
-        </tr>
-
-        <tr>
-            <td>2</td>
-            <td>Thiago</td>
-            <td>Masculino</td>
-            <td>20</td>
-            <td>webdesignemfoco@gmail.com</td>
-            <td>Luanda/Cazenga</td>
-            <td>17</td>
-            <td>39</td>
-            <td>02/06/2019</td>
-            <td>02/06/2019</td>
+           
+            <?php  
+                $a1 = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
+                $consulta1 = oci_parse($a1, "select candidato.bi_pessoa,pessoa.bi,pessoa.nome,pessoa.id_local_morada,local.id,local.provincia,local.municipio,local.bairro,local.rua from candidato,pessoa,local where candidato.bi_pessoa=pessoa.bi and pessoa.id_local_morada=local.id order by local.id asc "); 
+                oci_execute($consulta1); 
+                while ($row1 = oci_fetch_array($consulta1)){ 
+                    echo"<td>".($row1['BI']."</td><td>".$row1['NOME']."</td><td>".$row1['MUNICIPIO']."-".$row1['BAIRRO']."-".$row1['RUA'])."</td></tr>"; 
+                } 
+                oci_free_statement($consulta1);
+                oci_close($a1);
+            ?> 
+            
+            
+            
         </tr>
         </tbody>
     </table>

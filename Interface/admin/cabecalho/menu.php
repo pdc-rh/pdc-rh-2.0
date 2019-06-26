@@ -62,12 +62,12 @@
     <li class="item" id="estatistica">
         <a class="lista" href="#estatistica">Estatisticas</a>
         <div class="submenu">
-            <a href="perfil_oferta_local.php">Lista dos Perfis da oferta por Local</a>
+            <a href="perfil_oferta_local.php">Lista dos Candidatos por Local</a>
             <a href="#">Lista dos Candidatos por Local</a>
             <a href="#">Consulta do CV de um candidato</a>
             <a href="#">Lista dos Candidatos por perfil da oferta</a>
             <a href="#">Lista dos contratados (Mensal Anual)</a>
-            <a href="#">Para cada afiliar Lista todos dos Funcionários</a>
+            <a href="cadaFiliarTfuncionarios.php">Para cada afiliar Lista todos dos Funcionários</a>
             <a href="#">Para Cada afiliar lista o funcionário com maior prémio</a>
             <a href="#">Lista todas as afiliar cujo o total de prémio não seja superior a 10</a>
             <a href="#">Lista a afiliar cujo todos os Funcionários têm prémio</a>

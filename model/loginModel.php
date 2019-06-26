@@ -39,7 +39,7 @@ class loginModel {
             oci_execute($consulta1);
             $row1 = oci_fetch_array($consulta1, OCI_ASSOC);            
             if($row1){
-                
+                 $aux->CriarSecaoCand($telefone);
                 header("location:../Interface/admin/");
             }else{
                 header("location:../index.php?estado=1");
