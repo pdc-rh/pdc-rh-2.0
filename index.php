@@ -133,6 +133,9 @@
 
         <div class="sobre_texto" style="float: right; margin-right: 20px">
             <h2>Contactos</h2>
+            <p>(+244) 927-935-804<br>
+            (+244) 946-767-630<br>
+            (+244) 947-553-985</p>
         </div>
     </div>
 </footer>
@@ -145,7 +148,7 @@
         <input type="password" name="senha" placeholder="Senha">
         <button  class="botao" onclick="validarModalLogin()">Entrar</button>
 
-        <div class="erro-secssao">
+        <div class="erro-secssao" id="erro">
             Número de Telefone ou Senha inválida!
         </div>
     </div>
@@ -154,6 +157,8 @@
 <script src="personalizacao/javascript/validacoes.js">
 </script>
 <script >
+    var erro = document.getElementById("erro");
+    erro.style.display = "none";
     //mudar estilo do menu quando o eixo Y for maios ou igual a 200
     window.onscroll = function(event){
         var menu = document.getElementById("menu");
