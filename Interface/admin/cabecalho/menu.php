@@ -8,7 +8,7 @@
         <div class="submenu">
             <a href="registar_funcionario.php">Registar Funcionario</a>
             <a href="registar_gestor.php">Registar Gestor</a>
-            <a href="#">Listar</a>
+            <a href="listar_funcionario.php">Listar</a>
             <a href="activar_desactivar_funcionario.php">Activar/Desactivar Funcionario</a>
         </div>
     </li>
@@ -54,7 +54,7 @@
     <li class="item" id="area">
         <a href="#area" class="lista">Area</a>
         <div class="submenu">
-            <a href="#">Criar Categoria</a>
+            <a href="registar_area.php">Criar Area</a>
             <a href="#">Listar</a>
         </div>
     </li>
@@ -62,7 +62,7 @@
     <li class="item" id="estatistica">
         <a class="lista" href="#estatistica">Estatisticas</a>
         <div class="submenu">
-            <a href="#">Lista dos Perfis da oferta por Local</a>
+            <a href="perfil_oferta_local.php">Lista dos Perfis da oferta por Local</a>
             <a href="#">Lista dos Candidatos por Local</a>
             <a href="#">Consulta do CV de um candidato</a>
             <a href="#">Lista dos Candidatos por perfil da oferta</a>

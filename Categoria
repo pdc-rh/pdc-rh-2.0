@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+
+ <?php
+        require_once '../config/CRUD.php';
+        require_once '../config/conexao.php';
+        class Categoria implements Crud{
+	private  $nome;
+	private $id=1;
+        
+       
+
+
+
+        function __construct($nome, $id) {
+            $this->nome = $nome;
+            $this->id = $id;
+        }
+
+        	
+        }        function getNome() {
+            return $this->nome;
+        }
+
+        function getId() {
+            return $this->id;
+        }
+
+        function setNome($nome) {
+            $this->nome = $nome;
+        }
+
+        function setId($id) {
+            $this->id = $id;
+        }
+        
+        
+        public function delete(){
+        
+            
+        }
+
+    public function insert() {
+        $conexao=new Conexao();
+        $str="insert into categoria values('$this->id','$this->nome')";
+        $inserirCategoria=oci_parse($conexao->connect(),$str);
+        oci_execute($inserirCategoria);
+      
+    }
+
+    public function select() {
+        
+    }
+
+    public function update() {
+        
+    }
+        
+ ?>
+  

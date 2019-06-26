@@ -14,4 +14,15 @@
     <div class="logo">
          <img style="float: left;margin-left: 30px" src="../../personalizacao/img/logotipo.png"><span style="float: right;margin:auto; margin-right: 90px">PDC-RH</span>
     </div>
+    <div class="dados" >
+        <ul style="float: right">
+            <li>
+                <img src="../../personalizacao/img/avatar.png">
+                <a href="#">user</a>
+                <ul class="corSubmenu">
+                    <li><a href="index.php">sair</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </header>

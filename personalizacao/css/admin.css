@@ -39,12 +39,12 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 13px;
-    color: #fff;
+    color: #6a6a6a;;
 }
 
 .cabecalho .dados a:hover {
     background-color: #ffffff2c;
-    color: #f0f1f5;
+    color: #6a6a6a;
 }
 
 .cabecalho .dados ul {
@@ -439,6 +439,31 @@ button {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-/*  */
+/*  teste */
 
+
+.agrupar{
+    display:block;
+    margin: auto;
+    margin-left: 330px;
+    margin-top: 70px;
+}
+
+.tabela{
+    width: 1000px;
+    text-align: center;
+
+}
+.tabela thead{
+    background: black;
+    font-weight: bold;
+    color:#fff;
+}
+.tabela tbody tr:nth-child(2n){
+    background: #ccc;
+}
+
+.tabela th , .tabela td{
+    padding: 7px 0;
+}
 

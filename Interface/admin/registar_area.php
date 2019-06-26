@@ -4,12 +4,12 @@ include_once ("cabecalho/menu.php");
 ?>
 <div class="main">
     <div class="titulo">
-        <span>CAtegoria e Escalão/ Criar Categoria</span>
+        <span>Area/ Criar Area</span>
     </div>
 </div>
 <form method="post" action="/../controlador/Categoria.php" id="formulario">
 
-    <input class="Cat" placeholder="Informe a Categória a Registar " name="catego" type="text"/>
+    <input class="Cat" placeholder="Informe o Nome da area " name="catego" type="text"/>
 
 
        <div class="Bottons" name="Bottons" style="float: right">
