@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="personalizacao/css/estilo_candidato.css">
+    <script type="text/javascript" src="personalizacao/javascript/step_candidato.js"></script>
+</head>
+<body>
+<form id="formulario" action="ok.php" method="post">
+    <div class="tab">
+        <label for="nome">Nome Completo</label>
+        <input type="text" name="nome" id="nome" ><br>
+        <label for="nome"><label for="nome">Genero</label>
+        <select name=genero>
+            <option></option>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+        </select>
+        <label for="data">Data de Nascimento</label>
+        <input type="date" name="data" id="data" ><br>
+        <label for="bi">BI número</label>
+        <input type="text" name="bi" id="bi"/><br>
+            
+    </div>
+
+    <div class="tab">
+    
+        <label for="local">Local de Nascimento</label>
+        <input type="text" name="text" id="local" ><br>
+        <label for="nome"><label for="nome">Estado civil</label>
+        <select name="estado_civil">
+            <option></option>
+            <option>Solteiro/a</option>
+            <option>Casado/a</option>
+            <option>Divorciado/a</option>
+            <option>Viuvo/a</option>
+        </select>
+        <label for="pai">Morada actual</label>
+        <input type="text" name="morada" id="morada">
+
+        <label for="email">NIF</label>
+        <input type="email" name="nif" id="nif">
+
+        <label for="tipo">Tipo de funcionario</label>
+        <input type="text" name="tipo" id="tipo"/>
+
+    </div>
+    
+    <div class="tab">
+            <label for="carta">Número da carta de condução</label>
+            <input type="text" name="carta" id="carta">
+    
+            <label for="telefone">Número do telefone</label>
+            <input type="tel" name="telefone" id="telefone">
+        <label for="nacionalidade">Nacionalidade</label>
+        <select name="nacionalidade">
+            <option value="1">Angolana</option>
+        </select><br><br>
+
+        <label for="senha">Palavra passe</label>
+        <input type="password" placeholder="palavrapasse" name="senha" /><br><br>
+        
+       
+    </div>
+
+    <div style="overflow:auto;">
+        <div style="float:right;">
+            <button type="button" id="btnVoltar" onclick="continuarVoltar(-1)">Voltar</button>
+            <button type="button" id="btnContinuar" onclick="continuarVoltar(1)">Continuar</button>
+        </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+    </div>
+        
+</form>
+        
+
+</body>
+</html>

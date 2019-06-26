@@ -8,11 +8,11 @@ include_once ("cabecalho/menu.php");
         <span>Registar funcionário</span>
     </div>
 </div>
-<form id="formulario" action="ok.php" method="post">
+<form id="formulario" action="../../controlador/funcionarioControlador.php" method="post">
     <div class="tab">
         <label for="nome">Nome Completo</label>
         <input type="text" name="nome" id="nome" ><br>
-        <label for="nome"><label for="nome">Genero</label>
+        <label for="genero">Genero</label>
         <select name=genero>
             <option></option>
             <option value="M">Masculino</option>
@@ -32,7 +32,7 @@ include_once ("cabecalho/menu.php");
     <div class="tab">
 
         
-        <label for="nome"><label for="nome">Estado civil</label>
+        <label for="estado_civil">Estado civil</label>
         <select name="estado_civil">
             <option></option>
             <option>Solteiro/a</option>
@@ -47,8 +47,20 @@ include_once ("cabecalho/menu.php");
         <label for="telefone">Número do telefone</label>
         <input type="tel" name="telefone" id="telefone">
 
-        <label for="pai">Morada actual</label>
-        <input type="text" name="morada" id="morada">
+        <label for="morada">Morada actual</label>
+        <select name="morada">
+            <?php  
+                $a1 = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
+                $consulta1 = oci_parse($a1, "select * from local"); 
+                oci_execute($consulta1); 
+                while ($row1 = oci_fetch_array($consulta1)){ 
+                    echo"<option value='".$row1['ID']."'>".($row1['PROVINCIA']."-".$row1['MUNICIPIO']."-".$row1['BAIRRO']."-".$row1['RUA'])."</option>"; 
+                } 
+                oci_free_statement($consulta1);
+                oci_close($a1);
+            ?> 
+        </select>
+         
 
         
 
@@ -72,31 +84,48 @@ include_once ("cabecalho/menu.php");
     <div class="tab">
         <label for="filial">Filial</label>
         <select name="filial">
-            <option></option>
-            <option>Viana</option>
-            <option>Luanda</option>
-            <option>Cazenga</option>
-            <option>Cacuaco</option>
+             <?php  
+                $a1F = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
+                $consulta1F = oci_parse($a1F, "select * from filial"); 
+                oci_execute($consulta1F); 
+                while ($row1 = oci_fetch_array($consulta1F)){ 
+                    echo"<option value='".$row1['ID']."'>".$row1['DESCRICAO']."</option>"; 
+                } 
+                oci_free_statement($consulta1F);
+                oci_close($a1F);
+            ?> 
         </select>
         <label for="promocao">Promocao</label>
         <select name="promocao">
-            <option></option>
-            <option>D.g</option>
-            <option>Supervisor</option>
-            <option>Administrador</option>
+             <?php  
+                $a1 = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
+                $consulta1 = oci_parse($a1, "select * from promocao"); 
+                oci_execute($consulta1); 
+                while ($row1 = oci_fetch_array($consulta1)){ 
+                    echo"<option value='".$row1['ID']."'>".$row1['CATEGORIA']."</option>"; 
+                } 
+                oci_free_statement($consulta1);
+                oci_close($a1);
+            ?> 
         </select>
         <label for="progressao">Promocao</label>
         <select name="progressao">
-            <option></option>
-            <option>D.g</option>
-            <option>Supervisor</option>
-            <option>Administrador</option>
+             <?php  
+                $a1 = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
+                $consulta1 = oci_parse($a1, "select * from progressao"); 
+                oci_execute($consulta1); 
+                while ($row1 = oci_fetch_array($consulta1)){ 
+                    echo"<option value='".$row1['ID']."'>".$row1['ESCALAO']."</option>"; 
+                } 
+                oci_free_statement($consulta1);
+                oci_close($a1);
+            ?> 
         </select>
         <label for="categoria">Categoria</label>
         <input type="text" name="categoria" id="categoria">
     </div>
 
-    <div style="overflow:auto;">
+l    <div style="overflow:auto;">
         <div style="float:right;">
             <button type="button" id="btnVoltar" onclick="continuarVoltar(-1)">Voltar</button>
             <button type="button" id="btnContinuar" onclick="continuarVoltar(1)">Continuar</button>
