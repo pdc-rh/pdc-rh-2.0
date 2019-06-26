@@ -442,13 +442,17 @@ button {
 /*  teste */
 
 
-.agrupar{display:flex; margin: auto;}
+.agrupar{
+    display:block;
+    margin: auto;
+    margin-left: 330px;
+    margin-top: 70px;
+}
 
 .tabela{
     width: 1000px;
     text-align: center;
-    margin-left: 330px;
-    margin-top: 70px;
+
 }
 .tabela thead{
     background: black;

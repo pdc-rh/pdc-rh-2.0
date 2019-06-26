@@ -131,7 +131,7 @@
             <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
             <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
             <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
-            <button href="../../personalizacao/candidato/Ficha_de_incricao.php">Candidatar</button><br><br>
+            <button href="#">Candidatar</button><br><br>
         </div>
 
     </div>
@@ -155,22 +155,14 @@
         </div>
     </div>
 </footer>
-<?php 
-    session_start(); 
-    $bi=$_SESSION['login']['BI'];
-    $a1 = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
-    $consulta1 = oci_parse($a1, "select * from curriculum where bi_candidato='$bi'"); 
-    oci_execute($consulta1); 
-    $row = oci_fetch_array($consulta1, OCI_ASSOC); 
-    if(!$row):
-?>
+
 <form id="Modal" class="modal" >
     <div class="modal-conteudo">
         <h3>Preencha o seu Curriculum Vitae</h3>
         <a href="#" class="botao" id="preencher">Preencher</a>
     </div>
 </form>
-<?php endif;?>
+
 <script src="personalizacao/javascript/validacoes.js"></script>
 <script>
     //mudar estilo do menu quando o eixo Y for maios ou igual a 200

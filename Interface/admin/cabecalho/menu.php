@@ -62,7 +62,7 @@
     <li class="item" id="estatistica">
         <a class="lista" href="#estatistica">Estatisticas</a>
         <div class="submenu">
-            <a href="#">Lista dos Perfis da oferta por Local</a>
+            <a href="perfil_oferta_local.php">Lista dos Perfis da oferta por Local</a>
             <a href="#">Lista dos Candidatos por Local</a>
             <a href="#">Consulta do CV de um candidato</a>
             <a href="#">Lista dos Candidatos por perfil da oferta</a>
