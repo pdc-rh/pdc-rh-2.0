@@ -135,6 +135,10 @@
         <input type="text" name="telefone" placeholder="numero de telefone">
         <input type="password" name="senha" placeholder="Senha">
         <button  class="botao" onclick="validarModalLogin()">Entrar</button>
+
+        <div class="erro-secssao">
+            Número de Telefone ou Senha inválida!
+        </div>
     </div>
 </form>
 
