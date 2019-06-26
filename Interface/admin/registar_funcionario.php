@@ -156,10 +156,15 @@ l    <div style="overflow:auto;">
     function validarFormulario() {
         var x, y, i, valid = true;
         x = document.getElementsByClassName("tab");
-        y = x[contador].getElementsByTagName("input");
-       
+        y = x[tabActual].getElementsByTagName("input");
+        for (i = 0; i < y.length; i++) {
+            if (y[i].value == "" || y[i].value == " ") {
+                y[i].className += "invalido";
+                valid = false;
+            }
+        }
         if (valid) {
-            document.getElementsByClassName("step")[contador].className += " fim";
+            document.getElementsByClassName("step")[tabActual].className += " fim";
         }
         return valid;
     }

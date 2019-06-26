@@ -50,7 +50,7 @@
             <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
             <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
             <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
-            <button href="#">Candidatar</button><br><br>
+            <button href="#" id="vaga">Candidatar</button><br><br>
         </div>
 
         <div class="perfil">
@@ -63,7 +63,7 @@
             <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
             <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
             <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
-            <button href="#">Candidatar</button><br><br>
+            <button href="#" id="vaga">Candidatar</button><br><br>
         </div>
 
         <div class="perfil">
@@ -76,7 +76,7 @@
             <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
             <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
             <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
-            <button href="#">Candidatar</button><br><br>
+            <button href="#" id="vaga">Candidatar</button><br><br>
         </div>
 
         <div class="perfil">
@@ -89,7 +89,7 @@
             <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
             <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
             <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
-            <button href="#">Candidatar</button><br><br>
+            <button href="#" id="vaga">Candidatar</button><br><br>
         </div>
 
         <div class="perfil">
@@ -102,7 +102,7 @@
             <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
             <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
             <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
-            <button href="#">Candidatar</button><br><br>
+            <button href="#" id="vaga">Candidatar</button><br><br>
         </div>
 
         <div class="perfil">
@@ -115,7 +115,7 @@
             <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
             <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
             <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
-            <button href="#">Candidatar</button><br><br>
+            <button href="#" id="vaga">Candidatar</button><br><br>
         </div>
 
     </div>
@@ -133,6 +133,9 @@
 
         <div class="sobre_texto" style="float: right; margin-right: 20px">
             <h2>Contactos</h2>
+            <p>(+244) 927-935-804<br>
+            (+244) 946-767-630<br>
+            (+244) 947-553-985</p>
         </div>
     </div>
 </footer>
@@ -145,12 +148,29 @@
         <input type="password" name="senha" placeholder="Senha">
         <button  class="botao" onclick="validarModalLogin()">Entrar</button>
 
+<<<<<<< HEAD
+=======
+        <div class="erro-secssao" id="erro">
+            Número de Telefone ou Senha inválida!
+        </div>
+>>>>>>> master
+    </div>
+</form>
+
+
+<form id="modalVaga" class="modal" >
+    <div class="modal-conteudo">
+        <span class="fechar">&times;</span>
+        <button  class="botao" onclick="validarModalLogin()">Entrar</button>
+        <button  class="botao" onclick="validarModalLogin()">Criar Conta</button>
     </div>
 </form>
 
 <script src="personalizacao/javascript/validacoes.js">
 </script>
 <script >
+    var erro = document.getElementById("erro");
+    erro.style.display = "none";
     //mudar estilo do menu quando o eixo Y for maios ou igual a 200
     window.onscroll = function(event){
         var menu = document.getElementById("menu");
@@ -164,6 +184,7 @@
     //modal
     var modal = document.getElementById("Modal");
     var btn = document.getElementById("entrar");
+    var t = document.getElementsByClassName("fechar")[1];
     var fechar = document.getElementsByClassName("fechar")[0];
 
     btn.onclick = function(){
@@ -172,6 +193,16 @@
 
     fechar.onclick = function(){
         modal.style.display = "none";
+    }
+
+    //modal conta
+    var modalVaga = document.getElementById("modalVaga");
+    document.getElementById("vaga").onclick = function () {
+        modalVaga.style.display = "block";
+    }
+
+    t.onclick = function () {
+        modalVaga.style.display = "none";
     }
     //////////////////////////
 </script>
