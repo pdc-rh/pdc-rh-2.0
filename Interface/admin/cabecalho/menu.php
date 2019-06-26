@@ -8,7 +8,7 @@
         <div class="submenu">
             <a href="registar_funcionario.php">Registar Funcionario</a>
             <a href="registar_gestor.php">Registar Gestor</a>
-            <a href="#">Listar</a>
+            <a href="listar_funcionario.php">Listar</a>
             <a href="activar_desactivar_funcionario.php">Activar/Desactivar Funcionario</a>
         </div>
     </li>

@@ -439,6 +439,27 @@ button {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-/*  */
+/*  teste */
 
+
+.agrupar{display:flex; margin: auto;}
+
+.tabela{
+    width: 1000px;
+    text-align: center;
+    margin-left: 330px;
+    margin-top: 70px;
+}
+.tabela thead{
+    background: black;
+    font-weight: bold;
+    color:#fff;
+}
+.tabela tbody tr:nth-child(2n){
+    background: #ccc;
+}
+
+.tabela th , .tabela td{
+    padding: 7px 0;
+}
 
