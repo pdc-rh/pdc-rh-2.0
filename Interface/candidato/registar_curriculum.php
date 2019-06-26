@@ -7,23 +7,34 @@
     <link rel="stylesheet" type="text/css" href="../../personalizacao/css/estilo_candidato.css">
 </head>
 <body>
-<form id="formulario" action="ok.php" method="post">
+    <form id="formulario" action="../../controlador/curriculumControlador.php" method="post">
     <div class="tab">
         <h3>Habilitação Literaria</h3>
         <label for="instituicao_hab">Instituicao</label>
-        <input type="text"  name="instituicao_hab"/>
+        <input type="text"  name="instituicao"/>
 
         <label for="area">Área</label>
         <select name="area">
-            <option value="1">Infra estrutura de redes</option>
-            <option value="2">Programacao</option>
+        <?php  
+                $a1 = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
+                $consulta1 = oci_parse($a1, "select * from area"); 
+                oci_execute($consulta1); 
+                while ($row1 = oci_fetch_array($consulta1)){ 
+                    echo"<option value='".$row1['ID']."'>".($row1['NOME'])."</option>"; 
+                } 
+                oci_free_statement($consulta1);
+                oci_close($a1);
+            ?>
         </select>
 
         <label for="nivel">Grau Academico</label>
         <select name="nivel">
-            <option value="Bacharel">Bacharel</option>
+            <option value="Técnico Base">Técnico Base</option>
             <option value="Técnico Médio">Técnico Médio</option>
+            <option value="Bacharel">Bacharel</option>
             <option value="Licenciado">Licenciado</option>
+            <option value="Mestre">Mestre</option>
+            <option value="PhD">PhD</option>
         </select>
 
         <label for="dataTermino">Data de Término</label>
@@ -36,7 +47,7 @@
 
         <h3>Experiencia Profissional</h3>
         <label for="instituicao_exp">Instituicao</label>
-        <input type="text" name="instituicao_exp"/>
+        <input type="text" name="instituicaoExp"/>
         <br /><br />
 
         <label for="funcao">Função Desempenhada</label>
@@ -53,15 +64,15 @@
 
         <h3>Outras Qualificações</h3>
         <label for="instituicao_exp">Instituicao</label>
-        <input type="text" name="instituicao_exp"/>
+        <input type="text" name="instituicaoQual"/>
         <br /><br />
 
         <label for="descricao_Qualificacoes">Descrição</label>
-        <input type="text" name="descricao_Qualificacoes"/>
+        <input type="text" name="descricaoQualificacoes"/>
         <br /><br />
 
         <label for="ano_Obtencao">Ano de obtencao</label>
-        <input type="date"   name="ano_Obtencao"/><br /><br />
+        <input type="number"   name="anoObtencao"/><br /><br />
 
     </div>
 
@@ -73,28 +84,41 @@
         <br /><br />
 
         <label for="data_publicacao">Data de publicação</label>
-        <input type="date"   name="data_publicacao"/><br /><br />
+        <input type="date"   name="dataPublicacao"/><br /><br />
 
     </div>
 
     <div class="tab">
 
-        <h3>Línguas</h3>
+        <h3>Línguas (1)</h3>
         <label for="idioma">Descrição</label>
-        <select name="idioma">
+        <select name="idioma1">
             <option value="Portugues">Portugues</option>
-            <option value="Ingles">Boa</option>
-            <option value="Frances">Média</option>
+            <option value="Ingles">Ingles</option>
+            <option value="Frances">Frances</option>
+            <option value="Mandarim ">Mandarim </option>
+            <option value="Espanhol ">Espanhol </option>
+            <option value="Russo ">Russo </option>
+            <option value="Japones ">Japones </option>
+            <option value="Coreano  ">Coreano </option>
+            <option value="Alemão ">Alemão </option>
         </select>
         <br /><br />
         <label for="nivelFala">Nivel de Fala</label>
-        <select name="nivelFala">
+        <select name="nivelFala1">
             <option value="Fluente">Fluente</option>
             <option value="Boa">Boa</option>
             <option value="Media">Média</option>
         </select>
         <label for="nivelEscrita">Nivel de Escrita</label>
-        <select name="nivelEscrita">
+        <select name="nivelEscrita1">
+            <option value="Fluente">Fluente</option>
+            <option value="Boa">Boa</option>
+            <option value="Media">Média</option>
+        </select>
+        
+        <label for="nivelEscrita">Nivel de Leitura</label>
+        <select name="nivelLeitura1">
             <option value="Fluente">Fluente</option>
             <option value="Boa">Boa</option>
             <option value="Media">Média</option>
@@ -102,6 +126,86 @@
 
     </div>
 
+        
+    <div class="tab">
+
+        <h3>Línguas (2)</h3>
+        <label for="idioma">Descrição</label>
+        <select name="idioma2">
+            <option value="Portugues">Portugues</option>
+            <option value="Ingles">Ingles</option>
+            <option value="Frances">Frances</option>
+            <option value="Mandarim ">Mandarim </option>
+            <option value="Espanhol ">Espanhol </option>
+            <option value="Russo ">Russo </option>
+            <option value="Japones ">Japones </option>
+            <option value="Coreano  ">Coreano </option>
+            <option value="Alemão ">Alemão </option>
+        </select>
+        <br /><br />
+        <label for="nivelFala">Nivel de Fala</label>
+        <select name="nivelFala2">
+            <option value="Fluente">Fluente</option>
+            <option value="Boa">Boa</option>
+            <option value="Media">Média</option>
+        </select>
+        <label for="nivelEscrita">Nivel de Escrita</label>
+        <select name="nivelEscrita2">
+            <option value="Fluente">Fluente</option>
+            <option value="Boa">Boa</option>
+            <option value="Media">Média</option>
+        </select>
+        
+        <label for="nivelEscrita">Nivel de Leitura</label>
+        <select name="nivelLeitura2">
+            <option value="Fluente">Fluente</option>
+            <option value="Boa">Boa</option>
+            <option value="Media">Média</option>
+        </select>
+
+    </div>
+
+
+
+    <div class="tab">
+
+        <h3>Línguas (3)</h3>
+        <label for="idioma">Descrição</label>
+        <select name="idioma3">
+            <option value="Portugues">Portugues</option>
+            <option value="Ingles">Ingles</option>
+            <option value="Frances">Frances</option>
+            <option value="Mandarim ">Mandarim </option>
+            <option value="Espanhol ">Espanhol </option>
+            <option value="Russo ">Russo </option>
+            <option value="Japones ">Japones </option>
+            <option value="Coreano  ">Coreano </option>
+            <option value="Alemão ">Alemão </option>
+        </select>
+        <br /><br />
+        <label for="nivelFala">Nivel de Fala</label>
+        <select name="nivelFala3">
+            <option value="Fluente">Fluente</option>
+            <option value="Boa">Boa</option>
+            <option value="Media">Média</option>
+        </select>
+        <label for="nivelEscrita">Nivel de Escrita</label>
+        <select name="nivelEscrita3">
+            <option value="Fluente">Fluente</option>
+            <option value="Boa">Boa</option>
+            <option value="Media">Média</option>
+        </select>
+        
+        <label for="nivelEscrita">Nivel de Leitura</label>
+        <select name="nivelLeitura3">
+            <option value="Fluente">Fluente</option>
+            <option value="Boa">Boa</option>
+            <option value="Media">Média</option>
+        </select>
+
+    </div>        
+        
+        
     <div style="overflow:auto;">
         <div style="float:left">
             <button type="button" onclick="cancelar()" style="background-color: red">Cancelar</button>
@@ -112,6 +216,8 @@
         </div>
     </div>
     <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
@@ -141,10 +247,7 @@
         var x, y, i, valid = true;
         x = document.getElementsByClassName("tab");
         y = x[contador].getElementsByTagName("input");
-        if(!(/^[A-Z]\[a-z]*/).test(y[0].value)){
-            y[0].className += " invalido";
-            valid = false;
-        }
+
         if (valid) {
             document.getElementsByClassName("step")[contador].className += " fim";
         }
