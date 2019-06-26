@@ -17,9 +17,9 @@ class loginModel {
         return "select * from gestor_recrutamento_selecao where id_gestor_area in (select id from gestor_area where bi_funcionario in (select bi_pessoa from funcionario where bi_pessoa in (select bi from pessoa where telefone=$this->telefone))) and senha='$this->senha'";
     }    
     private function CriarSecaoCand($num){
-        $conexao= new conexao();
+        $conexao= new Conexao();
         session_start();
-        $secao = oci_parse($conexao->conecaoOci(),"select bi nome from pessoa where telefone=$num");
+        $secao = oci_parse($conexao->connect(),"select bi,nome from pessoa where telefone=$num");
         oci_execute($secao);
         $l=oci_fetch_array($secao, OCI_ASSOC);
         $_SESSION['login']=$l;
