@@ -3,6 +3,7 @@ require_once '../config/CRUD.php';
 require_once '../config/conexao.php';
 
 class funcionario {
+    
     private $bi_pessoa;
     private $email;
     private $nome_da_mae;
@@ -12,8 +13,9 @@ class funcionario {
     private $id_progressao;
     private $categoria;
     private $estado;
-    
-    public function __construct($bi_pessoa, $email, $nome_da_mae, $nome_do_pai, $id_filial, $id_promocao, $id_progressao, $categoria, $estado) {
+    private $area;
+       
+    public function __construct($bi_pessoa, $email, $nome_da_mae, $nome_do_pai, $id_filial, $id_promocao, $id_progressao, $categoria, $estado,$area) {
         $this->bi_pessoa = $bi_pessoa;
         $this->email = $email;
         $this->nome_da_mae = $nome_da_mae;
@@ -23,6 +25,7 @@ class funcionario {
         $this->id_progressao = $id_progressao;
         $this->categoria = $categoria;
         $this->estado = $estado;
+        $this->area = $area;
     }
 
     public function getBi_pessoa() {
@@ -100,7 +103,7 @@ class funcionario {
 
     public function insert() {
         $conexao=new Conexao();
-        $str="insert into funcionario values('$this->bi_pessoa','$this->email','$this->nome_da_mae','$this->nome_do_pai','$this->id_filial','$this->id_promocao',$this->id_progressao,'$this->categoria',$this->estado)";
+        $str="insert into funcionario values('$this->bi_pessoa','$this->email','$this->nome_da_mae','$this->nome_do_pai','$this->id_filial','$this->id_promocao',$this->id_progressao,'$this->categoria','$this->estado','$this->area')";
         $inserirFuncionario=oci_parse($conexao->connect(),$str);
         oci_execute($inserirFuncionario);
         

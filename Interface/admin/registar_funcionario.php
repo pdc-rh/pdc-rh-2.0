@@ -69,7 +69,10 @@ include_once ("cabecalho/menu.php");
     <div class="tab">
 
         <label for="tipo">Tipo de funcionario</label>
-        <input type="text" name="tipo" id="tipo">
+        <select name="tipo">
+                <option value="Gestor de area">Gestor de outras area</option>
+                <option value="Outros funcionarios">Outros</option>
+            </select>
         <label for="nif">NIF</label>
         <input type="text" name="nif" id="nif">
         <label for="pai">Nome do Pai</label>
@@ -77,7 +80,21 @@ include_once ("cabecalho/menu.php");
 
         <label for="mae">Nome da Mãe</label>
         <input type="text" name="mae" id="mae"><br>
-
+        
+          <label for="area">Area</label>
+        <select name="area">
+            <?php  
+                $a1 = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
+                $consulta1 = oci_parse($a1, "select * from area"); 
+                oci_execute($consulta1); 
+                while ($row1 = oci_fetch_array($consulta1)){ 
+                    echo"<option value='".$row1['ID']."'>".$row1['NOME']."</option>"; 
+                } 
+                oci_free_statement($consulta1);
+                oci_close($a1);
+            ?> 
+        </select>
+         
         
     </div>
     
