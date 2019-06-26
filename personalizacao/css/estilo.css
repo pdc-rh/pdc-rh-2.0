@@ -33,12 +33,13 @@ body{
     float: left;
 }
 
-.sobre_texto{
-    width: 300px;
-     font-family: sans-serif;
+#sobre .sobre_texto{
+    padding: 15px;
+    font-family: sans-serif;
     font-family: 'Open Sans', sans-serif;
-    font-color:#ffffff;
-    position: absolute;
+    color:#ffffff;
+    margin-left: 10px;
+    text-align: center;
 }
 
 
