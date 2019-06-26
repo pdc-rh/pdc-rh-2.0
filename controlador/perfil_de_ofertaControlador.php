@@ -3,16 +3,10 @@
 require_once '../model/Perfil_de_oferta.php';
 
 $area=$_POST['area'];
-$pais=$_POST['pais'];
-$provincia=$_POST['provincia'];
-$muncipio=$_POST['municipio'];
-$bairro=$_POST['bairro'];
-$perfil=$_POST['perfil'];
+$descricao=$_POST['descricao'];
 $regalias=$_POST['regalias'];
-$habil=$_POST['habil'];
-
-
-$Out_Qual=$_POST['Out_Qual'];
+$local = $_POST['local'];
+$preferencia=$_POST['preferencia'];
 $Idade_Min=$_POST['Idade_Min'];
 $Idade_Max=$_POST['Idade_Max'];
 $dataC=$_POST['Data_Cria'];

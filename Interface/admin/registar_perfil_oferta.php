@@ -10,6 +10,7 @@ include_once ("cabecalho/menu.php");
 <form method="post" action="Perfil_de_Oferta.php"   id="formulario">
 
     <div class="tab">
+        <input class="Perfil" name="descricao" placeholder="Descrição de Oferta de trabalho " type="text"/>
         <label class="Areas_text" for="Areas" autocomplete="off">Area de Responsabilidade:
             <select name="area">
                   <?php  
@@ -22,72 +23,30 @@ include_once ("cabecalho/menu.php");
                         oci_free_statement($consulta1F);
                         oci_close($a1F);
                     ?> 
-
             </select>
         </label>
+   
 
-
-        <label class="Pais_text">Pais:
-            <select name="pais">
-                  <?php  
-                        $a1F = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
-                        $consulta1F = oci_parse($a1F, "select * from local"); 
-                        oci_execute($consulta1F); 
-                        while ($row1 = oci_fetch_array($consulta1F)){ 
-                            echo"<option value='".$row1['ID']."'>".$row1['PAIS']."</option>"; 
-                        } 
-                        oci_free_statement($consulta1F);
-                        oci_close($a1F);
-                    ?> 
-            </select>
-        </label>
-
-
-        <label class="Provincia_text">Província:
-            <select name="provincia">
-                  <?php  
-                        $a1F = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
-                        $consulta1F = oci_parse($a1F, "select * from local"); 
-                        oci_execute($consulta1F); 
-                        while ($row1 = oci_fetch_array($consulta1F)){ 
-                            echo"<option value='".$row1['ID']."'>".$row1['PROVINCIA']."</option>"; 
-                        } 
-                        oci_free_statement($consulta1F);
-                        oci_close($a1F);
-                    ?> 
-            </select>
-               
-        </label>
-
-
-        <label class="Municipio_text" for="Municipio">Município:
-            <select name="municipio">
-                  <?php  
-                        $a1F = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
-                        $consulta1F = oci_parse($a1F, "select * from local"); 
-                        oci_execute($consulta1F); 
-                        while ($row1 = oci_fetch_array($consulta1F)){ 
-                            echo"<option value='".$row1['ID']."'>".$row1['Municipio']."</option>"; 
-                        } 
-                        oci_free_statement($consulta1F);
-                        oci_close($a1F);
-                    ?> 
-
-            </select>
-        </label>
+        <label for="local">Local</label>
+        <select name="local">
+            <?php  
+                $a1 = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
+                $consulta1 = oci_parse($a1, "select * from local"); 
+                oci_execute($consulta1); 
+                while ($row1 = oci_fetch_array($consulta1)){ 
+                    echo"<option value='".$row1['ID']."'>".($row1['PROVINCIA']."-".$row1['MUNICIPIO']."-".$row1['BAIRRO']."-".$row1['RUA'])."</option>"; 
+                } 
+                oci_free_statement($consulta1);
+                oci_close($a1);
+            ?> 
+        </select>
     </div>
 
-
     <div class="tab">
-        <input type="text" name="bairro" placeholder="Digite O Bairro, Rua e numero da Casa" class="Ba_Ru_Ca" />
 
-        <input class="Perfil" name="perfil" placeholder="Perfil do Posto de Trabalho: " type="text"/>
+        <input class="Perfil" name="preferencia" placeholder="Preferencia do Posto de Trabalho: " type="text"/>
 
-        <input type="text" name="regalias" placeholder="Condições e Regalias" class="Condicoes_Reg" />
-
-        <textarea type="text" class="Habil" name="habil" type="text"  placeholder="Habilitações Literarias Requeridas" id="Habil" name="Habil"  size="5300" maxlength="5000"></textarea>
-
-        <textarea  type="text"  class="Out_Qual" name="Out_Qual" type="text"  placeholder="Outras Qualificações Requeridas" required id="Out_Qual" name="Out_Qual" size="2000" maxlength="1400"></textarea>
+        <textarea type="text" class="Habil" name="regalias"  placeholder="Condições e Regalias" id="Habil"  size="5300" maxlength="5000"></textarea>
     </div>
 
     <div class="tab">
@@ -112,7 +71,6 @@ include_once ("cabecalho/menu.php");
         </div>
     </div>
     <div style="text-align:center;margin-top:40px;">
-        <span class="step"></span>
         <span class="step"></span>
         <span class="step"></span>
     </div>
