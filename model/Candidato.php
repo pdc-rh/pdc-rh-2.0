@@ -1,7 +1,7 @@
 <?php
 require_once '../model/Pessoa.php';
 require_once '../config/CRUD.php';
-class Candidato extends Pessoa implements Crud{
+class Candidato  implements Crud{
     private $bi;
     private $id;
     private $palavraPasse;
@@ -14,7 +14,7 @@ class Candidato extends Pessoa implements Crud{
         $this->id = $id;
         $this->palavraPasse = $palavraPasse;
         $this->nacionalidade = $nacionalidade;
-        $this->estado = 1;
+        $this->estado = $estado;
         $this->idLocal = $idLocal;
     }
 
@@ -72,7 +72,10 @@ class Candidato extends Pessoa implements Crud{
     }
 
     public function insert() {
+        $conexao=new Conexao();
         $str="insert into candidato values('$this->bi',1,'$this->palavraPasse','$this->nacionalidade','1',$this->idLocal)";
+        $inserirPessoa=oci_parse($conexao->connect(),$str);
+        oci_execute($inserirPessoa);
     }
 
     public function select() {

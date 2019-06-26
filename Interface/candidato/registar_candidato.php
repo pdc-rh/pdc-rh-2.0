@@ -29,7 +29,20 @@
     <div class="tab">
     
         <label for="local">Local de Nascimento</label>
-        <input type="text" name="local" id="local" /><br>
+
+        
+        <select name="local">
+            <?php  
+                $a1 = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
+                $consulta1 = oci_parse($a1, "select * from local"); 
+                oci_execute($consulta1); 
+                while ($row1 = oci_fetch_array($consulta1)){ 
+                    echo"<option value='".$row1['ID']."'>".($row1['PROVINCIA']."-".$row1['MUNICIPIO']."-".$row1['BAIRRO']."-".$row1['RUA'])."</option>"; 
+                } 
+                oci_free_statement($consulta1);
+                oci_close($a1);
+            ?> 
+        </select>
         <label for="nome">Estado civil</label>
         <select name="estadoCivil">
             <option></option>
@@ -39,7 +52,18 @@
             <option>Viuvo/a</option>
         </select>
         <label for="pai">Morada actual</label>
-        <input type="text" name="morada" id="morada"/>
+                <select name="morada">
+            <?php  
+                $a1 = oci_connect("pdc-rh-v2", "123","localhost/XE"); 
+                $consulta1 = oci_parse($a1, "select * from local"); 
+                oci_execute($consulta1); 
+                while ($row1 = oci_fetch_array($consulta1)){ 
+                    echo"<option value='".$row1['ID']."'>".($row1['PROVINCIA']."-".$row1['MUNICIPIO']."-".$row1['BAIRRO']."-".$row1['RUA'])."</option>"; 
+                } 
+                oci_free_statement($consulta1);
+                oci_close($a1);
+            ?> 
+        </select>
 
         <label for="email">NIF</label>
         <input type="text" name="nif" id="nif"/>

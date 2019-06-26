@@ -6,7 +6,7 @@ include_once ("cabecalho/menu.php");
 ?>
 <div class="main">
     <div class="titulo">
-        <span>Registar candidato</span>
+        <span>Candidato/ Registar candidato</span>
     </div>
 
 

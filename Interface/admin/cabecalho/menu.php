@@ -7,7 +7,7 @@
         <a href="#funcionario" class="lista">Funcionarios</a>
         <div class="submenu">
             <a href="registar_funcionario.php">Registar Funcionario</a>
-            <a href="Reg_Gestor.php">Registar Gestor</a>
+            <a href="registar_gestor.php">Registar Gestor</a>
             <a href="#">Listar</a>
             <a href="#">Activar/Desactivar Funcionario</a>
         </div>
@@ -18,7 +18,7 @@
         <div class="submenu">
             <a href="registar_candidato.php">Registar Candidato</a>
             <a href="#">Listar</a>
-            <a href="#">Marcar Entrevista</a>
+            <a href="marcar_entrevista.php">Marcar Entrevista</a>
             <a href="#">Aprovar Candidato</a>
             <a href="#">Adicionar Nota</a>
         </div>
@@ -27,8 +27,8 @@
     <li class="item" id="perfil">
         <a class="lista" href="#perfil">Perfil de Oferta</a>
         <div class="submenu">
-            <a href="#">Criar Perfil de Oferta</a>
-            <a href="#">Activar/Desactivar Perfil</a>
+            <a href="registar_perfil_oferta.php">Criar Perfil de Oferta</a>
+            <a href="activar_desactivar_perfil_oferta.php">Activar/Desactivar Perfil</a>
             <a href="#">Listar</a>
             <a href="#">Marcar Prova</a>
         </div>
@@ -46,7 +46,7 @@
     <li class="item" id="filiais">
         <a class="lista" href="#filiais">Filiais</a>
         <div class="submenu">
-            <a href="#">Registar Empresas Filiais</a>
+            <a href="registar_filial.php">Registar Empresas Filiais</a>
             <a href="#">Listar Empresas Filiais</a>
         </div>
     </li>

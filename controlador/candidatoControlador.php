@@ -19,5 +19,6 @@ $senha=$_POST['senha'];
 
 $pessoa=new Pessoa($bi, $nome, $genero, $nif, $estadoCivil, $carta, $telefone, $data1, $local, 'Candidato');
 $pessoa->insert();
-$candidato=new Candidato($bi, $id, $senha, $nacionalidade, 1, $morada);
-$candidato= insert();
+$candidatoR=new Candidato($bi, 1, $senha, $nacionalidade, 1, $morada);
+$candidatoR-> insert();
+header("location:../index.php?estado=2");
