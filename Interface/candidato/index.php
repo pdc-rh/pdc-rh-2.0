@@ -49,6 +49,17 @@
             <div class="linha azul"></div>
             <h1 class="vaga">Tecnico de Hardware</h1>
             <h4>Condições e Regalias</h4>
+
+
+
+
+
+
+
+
+
+
+
             <p>Bla Bla Bla</p>
             <h4>Preferencias</h4>
             <p>Bla Bla Bla</p>
@@ -126,10 +137,22 @@
     </div>
 </div>
 
-<footer>
-    <!-- Contacto -->
-    <div id="sobre" style="margin-top: 60px">
 
+<footer>
+    <div id="sobre" style="margin-top: 60px">
+        <div class="sobre_texto" style="float: left;">
+            <h2>Sobre PDC-RH</h2>
+             <p>Somos a PDC, uma empresa Vocacionada no desenvolvimento de aplicações web, com enfoque nas aplicações web.<br> Já
+        existimos no mercado a Mais de 10 Anos e neste periodo sempre mantivemos o nosso compromisso de prestar um serviço de 
+        máxima qualidade.<br> Todos os anos a nossa empresa apresenta novas vagas de emprego, no intuito de tornar este processo mais simple e eficiente
+        para os candidatos, decidimos desenvolver o PDC-RH que é uma página responsavel pela apresentação de perfis de oferta, recolha de Curriculum dos
+        candidatos e fichas de incrição </p>
+
+        </div>
+       
+        <div style="float: right;">
+            <h2>Contactos</h2>
+        </div>
     </div>
 </footer>
 
