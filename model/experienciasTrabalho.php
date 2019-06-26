@@ -55,7 +55,10 @@ class experienciasTrabalho  implements Crud {
     }
 
     public function insert() {
-        
+        $conexao=new Conexao();
+        $str="insert into experiencia_de_trabalho values($this->id,'$this->instituicao','$this->dataFimVinculo','$this->fucao')";
+        $inserirPessoa=oci_parse($conexao->connect(),$str);
+        oci_execute($inserirPessoa);        
     }
 
     public function select() {

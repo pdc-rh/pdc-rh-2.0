@@ -1,20 +1,32 @@
 <?php
-
+require_once '../model/curriculumHabilitacoes.php';
 require_once '../model/experienciasTrabalho.php';
 require_once '../model/habilitacoesLiterarias.php';
 require_once '../model/lingua.php';
 require_once '../model/outrasQualificacoes.php';
 require_once '../model/publicacoes.php';
+require_once '../model/curriculum.php';
 
 
 
-//habilitacoes
+session_start();
+$bi=$_SESSION['login']['BI'];
+
+$idCurr=0;
+$curriculum=new curriculum($idCurr, $bi);
+$idCurr=$curriculum->getIdUl();
+$curriculum->setId($idCurr);
+$curriculum->insert();
+
 
 $instituicao=$_POST['instituicao'];
 $area=$_POST['area'];
 $nivel=$_POST['nivel'];
 $dataTermin=$_POST['dataTermino'];
 $dataTermino=date('d-M-Y',strtotime($dataTermin));
+
+
+
 //experiencia profissional
 $instituicaoExp=$_POST['instituicaoExp'];
 $funcao=$_POST['funcao'];
@@ -57,11 +69,15 @@ $experiencias->setId($idexp+1);
 $experiencias->insert();
 
 
+
 $idHab=0;
 $experiencias=new habilitacoesLiterarias($idHab,$dataTermino, $instituicao, $area, $nivel);
 $idHab=$experiencias->getIdUl();
 $experiencias->setId($idHab+1);
 $experiencias->insert();
+
+$a=new curriculumHabilitacoes($idHab, $idCurr);//habilitacoes
+$a->insert();
 
 $idOut=0;
 $experiencias=new outrasQualificacoes($idOut, $instituicao, $descricaoQualificacoes, $anoObtencao);
