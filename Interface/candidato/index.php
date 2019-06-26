@@ -131,7 +131,7 @@
             <p><span>Área</span>: Psicologia &ensp;&ensp;&ensp;&ensp; <span>Local</span>:Angola/Luanda/Cazenga</p>
             <p><span>Idade minima</span>: 19 Anos &ensp;&ensp;&ensp;&ensp; <span>Idade máxima</span>:35 Anos</p>
             <p><span>Publicado</span>: 02/jun/2019 &ensp;&ensp;&ensp;&ensp; <span>Valido até</span>: 02/jul/2019</p>
-            <button href="#">Candidatar</button><br><br>
+            <button href="../../personalizacao/candidato/Ficha_de_incricao.php">Candidatar</button><br><br>
         </div>
 
     </div>

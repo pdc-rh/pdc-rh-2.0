@@ -9,7 +9,7 @@
             <a href="registar_funcionario.php">Registar Funcionario</a>
             <a href="registar_gestor.php">Registar Gestor</a>
             <a href="#">Listar</a>
-            <a href="#">Activar/Desactivar Funcionario</a>
+            <a href="activar_desactivar_funcionario.php">Activar/Desactivar Funcionario</a>
         </div>
     </li>
 
